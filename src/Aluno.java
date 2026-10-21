@@ -4,12 +4,12 @@ public class Aluno {
 
 	private String nome;
 	private String curso;
-	private int matricula;
+	private static int matricula;
 	
 	
 	
-	public Aluno(String nome, String curso, int matricula){
-		this.matricula = matricula;
+	public Aluno(String nome, String curso){
+		matricula ++;
 		setNome(nome);
 		setCurso(curso);
 	}
@@ -59,10 +59,16 @@ public class Aluno {
 
 
 
+
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome 
-				+ ", curso=" + curso 
+		return "Aluno [getNome()=" + getNome() 
+		+ ", getCurso()=" + getCurso() 
+		+ ", getMatricula()=" + getMatricula()
 				+ "]";
-	}	
+	}
+
+
+
+	
 }

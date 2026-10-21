@@ -1,19 +1,29 @@
 import java.util.Objects;
 
 public class Equipamento {
-
-	private String descricao;
-	private String status;
-	private String codEquipamento;
-	private String complementacao;
 	
-	public Equipamento(String descricao, String status, String codEquipamento) {
-		this.codEquipamento = codEquipamento;
-		setStatus(status);
-		setDescricao(descricao);
-		this.complementacao =  codEquipamento;
+	private String nome;
+	private int status;
+	private String descricao;
+	private int codEquipamento;
 		
+	public Equipamento(String nome, String descricao, int status) {
+		codEquipamento ++;
+		setNome(nome);
+		setStatus(status);
+		setDescricao(descricao);		
 	}
+	
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
 
 	public String getDescricao() {
 		return descricao;
@@ -23,16 +33,16 @@ public class Equipamento {
 		this.descricao = descricao;
 	}
 	
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
 	
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 	
-	public String getCodEquipamento() {
-		return this.complementacao;
+	public int getCodEquipamento() {
+		return codEquipamento;
 	}
 		
 
